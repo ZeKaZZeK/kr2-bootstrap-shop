@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Товар — ТехНест</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-lg navbar-dark bg-brand sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">ТехНест</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li><li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li><li class="nav-item"><a class="nav-link active" href="product.html" aria-current="page">Товар</a></li><li class="nav-item"><a class="nav-link" href="order.html">Заказ</a></li><li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li></ul>
+      <button class="btn btn-outline-light me-lg-2 mb-2 mb-lg-0" type="button" data-bs-toggle="modal" data-bs-target="#callModal">Заказать звонок</button>
+      <span class="navbar-text text-white">Корзина <span class="badge text-bg-warning" id="cartCount">0</span></span>
+    </div>
+  </div>
+</nav>
+
+<main class="flex-grow-1">
+<div class="container py-4">
+  <nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Главная</a></li><li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li><li class="breadcrumb-item active" id="crumb" aria-current="page">Наушники Aura X</li></ol></nav>
+  <div class="row g-4">
+    <div class="col-12 col-md-6"><img id="p-img" src="images/p1.svg" class="img-fluid rounded-3 shadow-sm w-100" alt="Наушники Aura X"></div>
+    <div class="col-12 col-md-6">
+      <span class="badge text-bg-danger mb-2" id="p-badge">Хит</span>
+      <span class="badge text-bg-light border mb-2" id="p-cat">Аудио</span>
+      <h1 id="p-name">Наушники Aura X</h1>
+      <p class="text-muted" id="p-desc">Беспроводные наушники с шумоподавлением и 40 часами работы.</p>
+      <p class="display-6 fw-bold" id="p-price">7 990 ₽</p>
+      <div class="alert alert-success" role="alert">В наличии. Доставка завтра.</div>
+      <div class="d-grid gap-2 d-sm-flex">
+        <a id="p-order" href="order.html?product=1" class="btn btn-brand btn-lg">Оформить заказ</a>
+        <button type="button" class="btn btn-outline-primary btn-lg js-add" id="p-add" data-name="Наушники Aura X">В корзину</button>
+        <a href="catalog.html" class="btn btn-link">Назад в каталог</a>
+      </div>
+    </div>
+  </div>
+  <ul class="nav nav-tabs mt-5" id="ptabs" role="tablist">
+    <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#t-spec" type="button" role="tab" aria-controls="t-spec" aria-selected="true">Характеристики</button></li>
+    <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#t-del" type="button" role="tab" aria-controls="t-del" aria-selected="false">Доставка</button></li>
+    <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#t-war" type="button" role="tab" aria-controls="t-war" aria-selected="false">Гарантия</button></li>
+  </ul>
+  <div class="tab-content border border-top-0 rounded-bottom p-3 bg-white">
+    <div class="tab-pane fade show active" id="t-spec" role="tabpanel"><div class="table-responsive"><table class="table table-striped mb-0">
+      <tbody><tr><th scope="row">Гарантия</th><td>24 месяца</td></tr><tr><th scope="row">Страна</th><td>Китай</td></tr><tr><th scope="row">Цвет</th><td>Чёрный, белый</td></tr><tr><th scope="row">Вес</th><td>250 г</td></tr></tbody></table></div></div>
+    <div class="tab-pane fade" id="t-del" role="tabpanel">Курьер по Москве за 1–2 дня, самовывоз из пунктов выдачи, отправка почтой по России.</div>
+    <div class="tab-pane fade" id="t-war" role="tabpanel">Официальная гарантия 24 месяца. Возврат в течение 14 дней.</div>
+  </div>
+</div>
+</main>
+
+<footer class="bg-dark text-white-50 py-4 mt-5">
+  <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+    <span>© 2026 ТехНест. Учебный проект КР №2.</span>
+    <span>г. Москва, ул. Примерная, 10 · +7 (495) 000-00-00</span>
+  </div>
+</footer>
+
+<!-- Модальное окно: быстрая заявка -->
+<div class="modal fade" id="callModal" tabindex="-1" aria-labelledby="callModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form class="needs-validation" novalidate data-modal="callModal">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="callModalLabel">Заказать обратный звонок</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="mName" class="form-label">Имя</label>
+            <input type="text" class="form-control" id="mName" name="name" required>
+            <div class="invalid-feedback">Укажите имя.</div>
+          </div>
+          <div class="mb-3">
+            <label for="mPhone" class="form-label">Телефон</label>
+            <div class="input-group">
+              <span class="input-group-text">+7</span>
+              <input type="tel" class="form-control" id="mPhone" name="phone" pattern="[0-9 ()-]{10,15}" placeholder="9991234567" required>
+              <div class="invalid-feedback">Введите 10 цифр номера.</div>
+            </div>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="mAgree" name="agree" required>
+            <label class="form-check-label" for="mAgree">Согласен на обработку персональных данных</label>
+            <div class="invalid-feedback">Нужно ваше согласие.</div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+          <button type="submit" class="btn btn-brand">Перезвоните мне</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="appToast" class="toast align-items-center text-bg-dark border-0" role="status" aria-live="polite" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body" id="toastText">Готово</div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

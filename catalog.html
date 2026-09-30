@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог — ТехНест</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-lg navbar-dark bg-brand sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">ТехНест</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li><li class="nav-item"><a class="nav-link active" href="catalog.html" aria-current="page">Каталог</a></li><li class="nav-item"><a class="nav-link" href="product.html">Товар</a></li><li class="nav-item"><a class="nav-link" href="order.html">Заказ</a></li><li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li></ul>
+      <button class="btn btn-outline-light me-lg-2 mb-2 mb-lg-0" type="button" data-bs-toggle="modal" data-bs-target="#callModal">Заказать звонок</button>
+      <span class="navbar-text text-white">Корзина <span class="badge text-bg-warning" id="cartCount">0</span></span>
+    </div>
+  </div>
+</nav>
+
+<main class="flex-grow-1">
+<div class="container py-4">
+  <h1 class="mb-3">Каталог товаров</h1>
+  <div class="row g-3 mb-4 align-items-center">
+    <div class="col-12 col-md-6 col-lg-7"><div class="btn-group flex-wrap" role="group" aria-label="Категории"><button type="button" class="btn btn-outline-primary active js-filter" data-cat="all">Все</button><button type="button" class="btn btn-outline-primary js-filter" data-cat="Аксессуары">Аксессуары</button><button type="button" class="btn btn-outline-primary js-filter" data-cat="Аудио">Аудио</button><button type="button" class="btn btn-outline-primary js-filter" data-cat="Носимые">Носимые</button></div></div>
+    <div class="col-12 col-md-6 col-lg-5">
+      <div class="input-group"><span class="input-group-text">Поиск</span>
+      <input type="search" class="form-control" id="search" placeholder="Название товара" aria-label="Поиск по каталогу"></div>
+    </div>
+  </div>
+  <div class="row g-4" id="grid"><div class="col-12 col-sm-6 col-lg-4 product-col" data-cat="Аудио" data-name="Наушники Aura X"><div class="card h-100 shadow-sm product-card">
+  <div class="position-relative"><span class="badge text-bg-danger position-absolute top-0 start-0 m-2">Хит</span><img src="images/p1.svg" class="card-img-top" alt="Наушники Aura X"></div>
+  <div class="card-body d-flex flex-column">
+    <span class="badge text-bg-light border align-self-start mb-2">Аудио</span>
+    <h3 class="h6 card-title">Наушники Aura X</h3>
+    <p class="card-text small text-muted">Беспроводные наушники с шумоподавлением и 40 часами работы.</p>
+    <p class="fw-bold fs-5 mt-auto mb-2">7 990 ₽</p>
+    <div class="d-grid gap-2 d-sm-flex">
+      <a href="product.html?id=1" class="btn btn-outline-primary btn-sm flex-fill">Подробнее</a>
+      <button type="button" class="btn btn-brand btn-sm flex-fill js-add" data-name="Наушники Aura X">В корзину</button>
+    </div>
+  </div>
+</div></div><div class="col-12 col-sm-6 col-lg-4 product-col" data-cat="Аудио" data-name="Колонка Pulse Mini"><div class="card h-100 shadow-sm product-card">
+  <div class="position-relative"><span class="badge text-bg-success position-absolute top-0 start-0 m-2">Новинка</span><img src="images/p2.svg" class="card-img-top" alt="Колонка Pulse Mini"></div>
+  <div class="card-body d-flex flex-column">
+    <span class="badge text-bg-light border align-self-start mb-2">Аудио</span>
+    <h3 class="h6 card-title">Колонка Pulse Mini</h3>
+    <p class="card-text small text-muted">Портативная колонка с защитой от воды IP67.</p>
+    <p class="fw-bold fs-5 mt-auto mb-2">3 490 ₽</p>
+    <div class="d-grid gap-2 d-sm-flex">
+      <a href="product.html?id=2" class="btn btn-outline-primary btn-sm flex-fill">Подробнее</a>
+      <button type="button" class="btn btn-brand btn-sm flex-fill js-add" data-name="Колонка Pulse Mini">В корзину</button>
+    </div>
+  </div>
+</div></div><div class="col-12 col-sm-6 col-lg-4 product-col" data-cat="Носимые" data-name="Смарт-часы Orbit 2"><div class="card h-100 shadow-sm product-card">
+  <div class="position-relative"><span class="badge text-bg-danger position-absolute top-0 start-0 m-2">Хит</span><img src="images/p3.svg" class="card-img-top" alt="Смарт-часы Orbit 2"></div>
+  <div class="card-body d-flex flex-column">
+    <span class="badge text-bg-light border align-self-start mb-2">Носимые</span>
+    <h3 class="h6 card-title">Смарт-часы Orbit 2</h3>
+    <p class="card-text small text-muted">Часы с GPS, пульсометром и AMOLED-экраном.</p>
+    <p class="fw-bold fs-5 mt-auto mb-2">9 990 ₽</p>
+    <div class="d-grid gap-2 d-sm-flex">
+      <a href="product.html?id=3" class="btn btn-outline-primary btn-sm flex-fill">Подробнее</a>
+      <button type="button" class="btn btn-brand btn-sm flex-fill js-add" data-name="Смарт-часы Orbit 2">В корзину</button>
+    </div>
+  </div>
+</div></div><div class="col-12 col-sm-6 col-lg-4 product-col" data-cat="Носимые" data-name="Фитнес-браслет Flex"><div class="card h-100 shadow-sm product-card">
+  <div class="position-relative"><img src="images/p4.svg" class="card-img-top" alt="Фитнес-браслет Flex"></div>
+  <div class="card-body d-flex flex-column">
+    <span class="badge text-bg-light border align-self-start mb-2">Носимые</span>
+    <h3 class="h6 card-title">Фитнес-браслет Flex</h3>
+    <p class="card-text small text-muted">Лёгкий браслет: шаги, сон, пульс, 14 дней без зарядки.</p>
+    <p class="fw-bold fs-5 mt-auto mb-2">2 990 ₽</p>
+    <div class="d-grid gap-2 d-sm-flex">
+      <a href="product.html?id=4" class="btn btn-outline-primary btn-sm flex-fill">Подробнее</a>
+      <button type="button" class="btn btn-brand btn-sm flex-fill js-add" data-name="Фитнес-браслет Flex">В корзину</button>
+    </div>
+  </div>
+</div></div><div class="col-12 col-sm-6 col-lg-4 product-col" data-cat="Аксессуары" data-name="Powerbank 20000"><div class="card h-100 shadow-sm product-card">
+  <div class="position-relative"><span class="badge text-bg-warning position-absolute top-0 start-0 m-2">Скидка</span><img src="images/p5.svg" class="card-img-top" alt="Powerbank 20000"></div>
+  <div class="card-body d-flex flex-column">
+    <span class="badge text-bg-light border align-self-start mb-2">Аксессуары</span>
+    <h3 class="h6 card-title">Powerbank 20000</h3>
+    <p class="card-text small text-muted">Внешний аккумулятор 20000 мАч с быстрой зарядкой 65 Вт.</p>
+    <p class="fw-bold fs-5 mt-auto mb-2">2 490 ₽</p>
+    <div class="d-grid gap-2 d-sm-flex">
+      <a href="product.html?id=5" class="btn btn-outline-primary btn-sm flex-fill">Подробнее</a>
+      <button type="button" class="btn btn-brand btn-sm flex-fill js-add" data-name="Powerbank 20000">В корзину</button>
+    </div>
+  </div>
+</div></div><div class="col-12 col-sm-6 col-lg-4 product-col" data-cat="Аксессуары" data-name="Клавиатура Keyo"><div class="card h-100 shadow-sm product-card">
+  <div class="position-relative"><img src="images/p6.svg" class="card-img-top" alt="Клавиатура Keyo"></div>
+  <div class="card-body d-flex flex-column">
+    <span class="badge text-bg-light border align-self-start mb-2">Аксессуары</span>
+    <h3 class="h6 card-title">Клавиатура Keyo</h3>
+    <p class="card-text small text-muted">Компактная механическая клавиатура с подсветкой.</p>
+    <p class="fw-bold fs-5 mt-auto mb-2">4 590 ₽</p>
+    <div class="d-grid gap-2 d-sm-flex">
+      <a href="product.html?id=6" class="btn btn-outline-primary btn-sm flex-fill">Подробнее</a>
+      <button type="button" class="btn btn-brand btn-sm flex-fill js-add" data-name="Клавиатура Keyo">В корзину</button>
+    </div>
+  </div>
+</div></div><div class="col-12 col-sm-6 col-lg-4 product-col" data-cat="Аксессуары" data-name="Веб-камера Clear HD"><div class="card h-100 shadow-sm product-card">
+  <div class="position-relative"><span class="badge text-bg-success position-absolute top-0 start-0 m-2">Новинка</span><img src="images/p7.svg" class="card-img-top" alt="Веб-камера Clear HD"></div>
+  <div class="card-body d-flex flex-column">
+    <span class="badge text-bg-light border align-self-start mb-2">Аксессуары</span>
+    <h3 class="h6 card-title">Веб-камера Clear HD</h3>
+    <p class="card-text small text-muted">Камера Full HD с автофокусом и двумя микрофонами.</p>
+    <p class="fw-bold fs-5 mt-auto mb-2">3 190 ₽</p>
+    <div class="d-grid gap-2 d-sm-flex">
+      <a href="product.html?id=7" class="btn btn-outline-primary btn-sm flex-fill">Подробнее</a>
+      <button type="button" class="btn btn-brand btn-sm flex-fill js-add" data-name="Веб-камера Clear HD">В корзину</button>
+    </div>
+  </div>
+</div></div><div class="col-12 col-sm-6 col-lg-4 product-col" data-cat="Аудио" data-name="Микрофон Voice USB"><div class="card h-100 shadow-sm product-card">
+  <div class="position-relative"><img src="images/p8.svg" class="card-img-top" alt="Микрофон Voice USB"></div>
+  <div class="card-body d-flex flex-column">
+    <span class="badge text-bg-light border align-self-start mb-2">Аудио</span>
+    <h3 class="h6 card-title">Микрофон Voice USB</h3>
+    <p class="card-text small text-muted">USB-микрофон для стримов и записи подкастов.</p>
+    <p class="fw-bold fs-5 mt-auto mb-2">5 490 ₽</p>
+    <div class="d-grid gap-2 d-sm-flex">
+      <a href="product.html?id=8" class="btn btn-outline-primary btn-sm flex-fill">Подробнее</a>
+      <button type="button" class="btn btn-brand btn-sm flex-fill js-add" data-name="Микрофон Voice USB">В корзину</button>
+    </div>
+  </div>
+</div></div></div>
+  <div class="alert alert-info mt-4 d-none" id="empty" role="alert">Ничего не найдено. Сбросьте фильтр или измените запрос.</div>
+  <nav class="mt-4" aria-label="Страницы каталога"><ul class="pagination justify-content-center" id="pagination"></ul></nav>
+</div>
+</main>
+
+<footer class="bg-dark text-white-50 py-4 mt-5">
+  <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+    <span>© 2026 ТехНест. Учебный проект КР №2.</span>
+    <span>г. Москва, ул. Примерная, 10 · +7 (495) 000-00-00</span>
+  </div>
+</footer>
+
+<!-- Модальное окно: быстрая заявка -->
+<div class="modal fade" id="callModal" tabindex="-1" aria-labelledby="callModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form class="needs-validation" novalidate data-modal="callModal">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="callModalLabel">Заказать обратный звонок</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="mName" class="form-label">Имя</label>
+            <input type="text" class="form-control" id="mName" name="name" required>
+            <div class="invalid-feedback">Укажите имя.</div>
+          </div>
+          <div class="mb-3">
+            <label for="mPhone" class="form-label">Телефон</label>
+            <div class="input-group">
+              <span class="input-group-text">+7</span>
+              <input type="tel" class="form-control" id="mPhone" name="phone" pattern="[0-9 ()-]{10,15}" placeholder="9991234567" required>
+              <div class="invalid-feedback">Введите 10 цифр номера.</div>
+            </div>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="mAgree" name="agree" required>
+            <label class="form-check-label" for="mAgree">Согласен на обработку персональных данных</label>
+            <div class="invalid-feedback">Нужно ваше согласие.</div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+          <button type="submit" class="btn btn-brand">Перезвоните мне</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="appToast" class="toast align-items-center text-bg-dark border-0" role="status" aria-live="polite" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body" id="toastText">Готово</div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
